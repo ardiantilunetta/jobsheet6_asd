@@ -5,7 +5,7 @@ public class Mahasiswa18 {
     double ipk;
 
     // Konstruktor default
-    Mahasiswa18(){   
+    Mahasiswa18(){
     }
 
     //Konstruktor berparameter (dibuat ada yang nama var parameter inputnya sama ada yang tidak)
