@@ -34,10 +34,16 @@ public class MahasiswaDemo18 {
         System.out.print("Masukkan IPK Mahasiswa yang Dicari : ");
         double cari = sc.nextDouble();
 
-        System.out.println("Menggunakan Sequential Searching");
-        double posisi = list.sequentialSearching(cari);
-        int pss = (int)posisi;
-        list.tampilPosisi(cari, pss);
-        list.tampilDataSearch(cari, pss);
+        // System.out.println("Menggunakan Sequential Searching");
+        // double posisi = list.sequentialSearching(cari);
+        // int pss = (int)posisi;
+        // list.tampilPosisi(cari, pss);
+        // list.tampilDataSearch(cari, pss);
+
+        System.out.println("Menggunakan Binary Search");
+        double posisi2 = list.findBinarySearch(cari, 0, jml-1);
+        int pss2 = (int)posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
     }
 }
