@@ -3,9 +3,13 @@ import java.util.Scanner;
 public class MahasiswaDemo18 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int jml = 5;
+
+        System.out.print("Masukkan jumlah mahasiswa : ");
+        int jml = sc.nextInt();
+        sc.nextLine();
+
         
-        MahasiswaBerprestari18 list = new MahasiswaBerprestari18();
+        MahasiswaBerprestari18 list = new MahasiswaBerprestari18(jml);
 
 
         for (int i = 0; i < jml; i++) {
