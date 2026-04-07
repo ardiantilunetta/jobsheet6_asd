@@ -3,12 +3,9 @@ import java.util.Scanner;
 public class MahasiswaDemo18 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.print("Masukkan jumlah mahasiswa: ");
-        int jml = sc.nextInt();
-        sc.nextLine();
+        int jml = 5;
         
-        MahasiswaBerprestari18 list = new MahasiswaBerprestari18(jml);
+        MahasiswaBerprestari18 list = new MahasiswaBerprestari18();
 
 
         for (int i = 0; i < jml; i++) {
@@ -27,15 +24,20 @@ public class MahasiswaDemo18 {
             double ipk = sc.nextDouble();
             sc.nextLine();
 
-            Mahasiswa18 m = new Mahasiswa18(nim, nama, kelas, ipk);
-            list.tambah(m);
+            list.tambah(new Mahasiswa18(nim, nama, kelas, ipk));
         }
 
-        System.out.println("\nData mahasiswa sebelum sorting:");
-        list.tampil();
+        // list.tampil();
+        System.out.println("--------------------------------------");
+        System.out.println("Pencarian Data");
+        System.out.println("--------------------------------------");
+        System.out.print("Masukkan IPK Mahasiswa yang Dicari : ");
+        double cari = sc.nextDouble();
 
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC):");
-        list.insertionSort();
-        list.tampil();
+        System.out.println("Menggunakan Sequential Searching");
+        double posisi = list.sequentialSearching(cari);
+        int pss = (int)posisi;
+        list.tampilPosisi(cari, pss);
+        list.tampilDataSearch(cari, pss);
     }
 }
